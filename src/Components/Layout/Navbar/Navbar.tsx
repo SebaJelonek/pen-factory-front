@@ -30,7 +30,8 @@ const penIcon = (
 const Navbar: React.FC = () => {
   const { isPenPage, setSearchValue, productAmount } =
     useContext(SearchBarContext);
-  const { isLoggedIn, isAdmin, setIsLoggedIn } = useContext(UserContext);
+  const { isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin } =
+    useContext(UserContext);
 
   useEffect(() => {}, [productAmount]);
 
@@ -40,6 +41,7 @@ const Navbar: React.FC = () => {
 
   const logOut = () => {
     setIsLoggedIn(false);
+    setIsAdmin(false);
     window.sessionStorage.removeItem('login');
     window.sessionStorage.removeItem('userId');
     window.sessionStorage.removeItem('isAdmin');
@@ -74,10 +76,14 @@ const Navbar: React.FC = () => {
             <StyledLink text='Add Pen' to='/add-pen' />
           </li>
         )}
-        {isLoggedIn && (
-          <li>
-            <StyledLink text='My orders' to='order' />
-          </li>
+        {isAdmin && isLoggedIn ? (
+          <li></li>
+        ) : (
+          isLoggedIn && (
+            <li>
+              <StyledLink text='My orders' to='order' />
+            </li>
+          )
         )}
         {isPenPage && (
           <li>
@@ -88,7 +94,9 @@ const Navbar: React.FC = () => {
             />
           </li>
         )}
-        {isLoggedIn ? (
+        {isLoggedIn && isAdmin ? (
+          <li></li>
+        ) : isLoggedIn ? (
           <li style={isPenPage ? { left: '51.5%' } : { left: '65.1%' }}>
             <StyledLink to='/cart'>
               {cartIcon}

@@ -80,7 +80,17 @@ const Product: React.FC<Props> = ({
       <h3 className={style['product-info']}>Product already in basket</h3>
     ) : amount === 0 ? (
       <h3 className={style['product-out']}>Product is out of stock</h3>
+    ) : isLoggedIn && isAdmin ? (
+      <div className={style['container__admin-buttons']}>
+        <Button
+          classType='btn-delete'
+          text='Delete'
+          onClickHandler={deletePen}
+        />
+        <Button classType='btn' text='Add more' onClickHandler={addPen} />
+      </div>
     ) : (
+      !isAdmin &&
       isLoggedIn && (
         <Button
           classType='btn-buy'
@@ -131,16 +141,6 @@ const Product: React.FC<Props> = ({
         </div>
       </div>
       {productInfo}
-      {isAdmin && (
-        <div className={style['container__admin-buttons']}>
-          <Button
-            classType='btn-delete'
-            text='Delete'
-            onClickHandler={deletePen}
-          />
-          <Button classType='btn' text='Add new' onClickHandler={addPen} />
-        </div>
-      )}
     </Fragment>
   );
 };
