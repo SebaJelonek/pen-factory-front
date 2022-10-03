@@ -34,12 +34,15 @@ const LoginPage: React.FC = () => {
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
     const loginUser = async () => {
-      const response = await fetch('http://localhost:1337/api/user/login', {
-        method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ login, password }),
-      });
+      const response = await fetch(
+        'https://pen-factory.onrender.com/api/user/login',
+        {
+          method: 'POST',
+          mode: 'cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ login, password }),
+        }
+      );
       return response.json();
     };
 

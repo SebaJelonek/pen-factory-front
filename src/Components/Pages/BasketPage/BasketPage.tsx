@@ -59,8 +59,7 @@ const BasketPage: React.FC = () => {
     console.log(productList);
     const response = async () => {
       const res = await fetch(
-        // `http://localhost:1337/api/order/new/${userId}`
-        `http://localhost:1337/api/order/new`,
+        'https://pen-factory.onrender.com/api/order/new',
         {
           method: 'POST',
           mode: 'cors',

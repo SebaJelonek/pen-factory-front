@@ -72,7 +72,7 @@ const RegisterPage: React.FC = () => {
     } else {
       const registerUser = async () => {
         const response = await fetch(
-          'http://localhost:1337/api/user/register',
+          'https://pen-factory.onrender.com/api/user/register',
           {
             method: 'POST',
             mode: 'cors',

@@ -30,7 +30,7 @@ const OrderPage: React.FC = () => {
   useEffect(() => {
     const orderList = () => {
       const res = async () => {
-        const response = await fetch('http://localhost:1337/api/order/list', {
+        const response = await fetch('https://pen-factory.onrender.com/api/order/list', {
           method: 'POST',
           mode: 'cors',
           headers: { 'Content-Type': 'application/json' },

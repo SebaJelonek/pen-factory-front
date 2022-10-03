@@ -74,14 +74,17 @@ const AddPenPage: React.FC = () => {
       }
 
       const addPen = async () => {
-        const response = await fetch('http://localhost:1337/api/pen/new', {
-          method: 'POST',
-          mode: 'cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            pen: { name, brand, color, amount, price },
-          }),
-        });
+        const response = await fetch(
+          'https://pen-factory.onrender.com/api/pen/new',
+          {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              pen: { name, brand, color, amount, price },
+            }),
+          }
+        );
         return response.json();
       };
       const response = addPen();

@@ -58,11 +58,14 @@ const PenPage: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const fetchPenList = await fetch('http://localhost:1337/api/pen/list', {
-        method: 'GET',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
-      });
+      const fetchPenList = await fetch(
+        'https://pen-factory.onrender.com/api/pen/list',
+        {
+          method: 'GET',
+          mode: 'cors',
+          headers: { 'Content-Type': 'application/json' },
+        }
+      );
       return fetchPenList.json();
     };
 
@@ -87,7 +90,7 @@ const PenPage: React.FC = () => {
   const addPen = (id: string) => {
     modalHandler();
     const response = async () => {
-      const res = await fetch('http://localhost:1337/api/pen/add', {
+      const res = await fetch('https://pen-factory.onrender.com/api/pen/add', {
         method: 'POST',
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
@@ -112,12 +115,15 @@ const PenPage: React.FC = () => {
   const deletePen = (id: string) => {
     modalHandler();
     const response = async () => {
-      const res = await fetch('http://localhost:1337/api/pen/delete', {
-        method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ _id: id }),
-      });
+      const res = await fetch(
+        'https://pen-factory.onrender.com/api/pen/delete',
+        {
+          method: 'POST',
+          mode: 'cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ _id: id }),
+        }
+      );
       return res.json();
     };
     const res = response();
