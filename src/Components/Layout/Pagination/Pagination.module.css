@@ -1,0 +1,28 @@
+.page-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.page {
+  font-family: 'Roboto', sans-serif;
+  color: #3d0036;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-left: 1em;
+  background-color: #00e6b9;
+  padding: 0.3em 0.65em;
+  border-radius: 5px;
+  border: solid 2px;
+  border-top-color: #0264c2;
+  border-left-color: #0264c2;
+  border-bottom-color: #012d58;
+  border-right-color: #012d58;
+  cursor: pointer;
+}
+.page:active {
+  background-color: #00c29c;
+  border-right-color: #0264c2;
+  border-bottom-color: #0264c2;
+  border-top-color: #012d58;
+  border-left-color: #012d58;
+}

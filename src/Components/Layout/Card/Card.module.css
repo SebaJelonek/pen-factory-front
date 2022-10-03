@@ -1,0 +1,16 @@
+.pen-page__card {
+  margin: 0 1em;
+  margin-bottom: 1em;
+  padding-bottom: 2.6em;
+  border-radius: 5px;
+  box-shadow: 3px 2px 12px 2px aliceblue;
+  transition: all 500ms ease-in;
+}
+.card {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding-bottom: 2.6em;
+  border-radius: 5px;
+  box-shadow: 3px 2px 12px 2px aliceblue;
+  transition: all 500ms ease-in;
+}

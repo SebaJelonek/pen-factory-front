@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #031f5f;
+  font-size: 1.5rem;
+  margin: 0 0 2em 0;
+  padding: 0.5em 0 0.5em 0;
+}
+.link-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+.icon {
+  filter: invert(69%) sepia(95%) saturate(451%) hue-rotate(9deg)
+    brightness(103%) contrast(101%);
+}
+.link-list > li:last-child {
+  height: 46px;
+  position: relative;
+  left: 60%;
+}
+.badge {
+  position: relative;
+  top: -55px;
+  font-size: 0.65em;
+  left: 50%;
+  background-color: red;
+  width: 21px;
+  border-radius: 100%;
+}

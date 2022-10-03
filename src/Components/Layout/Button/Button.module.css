@@ -1,0 +1,50 @@
+.btn {
+  background-color: #006b6b;
+  font-size: 1.25rem;
+  padding: 0.15em 0.5em;
+  border-radius: 10px;
+  transition: all 150ms ease-in;
+}
+.btn:hover {
+  background-color: #008a8a;
+  cursor: pointer;
+}
+.btn-buy {
+  width: 90%;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  background-color: #baab00;
+  border-radius: 25px;
+  transition: all 150ms ease-in;
+}
+.btn-buy:hover {
+  background-color: #ebd801;
+  cursor: pointer;
+}
+.btn-delete {
+  background-color: #ff331e;
+  font-size: 1.25rem;
+  padding: 0.15em 0.5em;
+  border-radius: 10px;
+  transition: all 150ms ease-in;
+}
+.btn-delete:hover {
+  background-color: #fb0012;
+  cursor: pointer;
+}
+.btn-finalize {
+  width: 15%;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  background-color: #baab00;
+  border-radius: 25px;
+  transition: all 150ms ease-in;
+  position: relative;
+  left: 40%;
+}
+.btn-finalize:hover {
+  background-color: #ebd801;
+  cursor: pointer;
+}
